@@ -1,10 +1,10 @@
 #!/bin/bash
 
-REFRESH() { sudo zypper refresh;}
-LIST() { sudo zypper lu;}
-PATCH() { sudo zypper patch-check;}
-UPGRADE() { sudo zypper ref && sudo zypper dup;}
-CLEAN() { sudo zypper clean;}
+REFRESH() { zypper refresh;}
+LIST() { zypper lu;}
+PATCH() { zypper patch-check;}
+UPGRADE() { zypper ref && sudo zypper dup;}
+CLEAN() { zypper clean;}
 
 if [ "$EUID" -ne 0 ]
     then echo "Please run as root"
